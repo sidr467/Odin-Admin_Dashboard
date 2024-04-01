@@ -1,0 +1,51 @@
+/* temporary borders */
+.sidebar,.header,.main-content{
+    border: 2px solid black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.sidebar{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+    grid-column: 1/2;
+    grid-row: 1/7;
+    background-color: rgb(30, 153, 205);
+    font-size: 19px;
+    padding-left: 40px;
+}
+
+.navigation-links,.logo,.branding-links{
+    display: grid;
+    align-content: center;
+    gap: 10px;
+
+}
+
+.header{
+    display: grid;
+    grid-row:1/1 ;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-content{
+    height: auto;    
+    display: grid;
+    grid-template-columns:3fr 1fr ;
+    grid-row: 2/7;
+}
