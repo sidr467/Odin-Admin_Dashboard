@@ -55,7 +55,6 @@ a{
 
 }
 
-
 .navigation-links,.logo,.branding-links{
     display: grid;
     align-content: center;
@@ -63,8 +62,23 @@ a{
 
 .header{
     display: grid;
-    grid-row:1/2 ;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 75% 25%;
+}
+
+.searchbar,.profile-info,.more-profile-info,.header-buttons{
+    display: flex;
+    align-items: center;
+    margin-left: 3%;    
+}
+
+.searchbar-input{
+    margin-left: 2%;
+    margin-right: 10%;
+    width: 70%;
+    height: 40%;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgb(220, 216, 216);
 }
 
 .main-content{
