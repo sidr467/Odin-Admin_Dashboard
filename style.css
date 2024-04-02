@@ -1,5 +1,5 @@
 /* temporary borders */
-.header,.main-content{
+.main-content{
     border: 2px solid black;
 }
 
@@ -62,28 +62,65 @@ a{
 
 .header{
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: rgb(234, 234, 234);
+    }
+    
+.searchbar{ 
+    grid-area: 1 / 1 / 2 / 3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.profile-info { 
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.searchbar,.profile-info,.more-profile-info,.header-buttons{
+.more-profile-info{ 
+    grid-area: 2 / 1 / 3 / 2; 
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 3%;    
+    gap: 20px;
+}
+.header-buttons{ 
+    grid-area: 2 / 2 / 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .searchbar-input{
-    margin-left: 2%;
-    margin-right: 10%;
     width: 70%;
-    height: 40%;
+    height: 50%;
+    margin-left: 20px;
+    margin-right: 80px;
+    padding-left: 20px;
     border-radius: 20px;
+    background-color: rgb(209, 207, 207);
     border-style: none;
-    background-color: rgb(220, 216, 216);
 }
 
-.main-content{
-    height: auto;    
-    display: grid;
-    grid-template-columns:3fr 1fr ;
-    grid-row: 2/7;
+button{
+    width: 15%;
+    height: 30%;
+    border-radius: 20px;
+    border-style: none;
+    background: rgb(30, 153, 205);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.text{
+    font-weight: bold;
 }
